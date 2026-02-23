@@ -56,10 +56,10 @@
         <div class="step-number">Welcome</div>
         <h2>Your job search,<br />on <em>autopilot</em></h2>
         <p class="subtitle">
-          We'll set up your personalized job-hunting pipeline in about 10
-          minutes. Every week, you'll receive tailored resumes, cover letters,
-          and match reports for roles that fit you &mdash; ready for your final
-          review before applying.
+          We'll set up your personalized job-hunting pipeline in about 48 hours.
+          Every week, you'll receive tailored resumes, cover letters, and match
+          reports for roles that fit you &mdash; ready for your final review
+          before applying.
         </p>
         <div class="steps-overview">
           <div class="steps-overview-grid">
@@ -137,6 +137,19 @@
           />
         </div>
 
+        <!-- Honeypot: invisible to humans, bots auto-fill it -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Company Website</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            tabindex="-1"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="step-error" id="stepError1"></div>
         <div class="nav-row">
           <button class="btn btn-secondary" onclick="prevStep()">Back</button>
           <button class="btn btn-primary" onclick="nextStep()">Continue</button>
@@ -223,6 +236,7 @@
           </div>
         </div>
 
+        <div class="step-error" id="stepError2"></div>
         <div class="nav-row">
           <button class="btn btn-secondary" onclick="prevStep()">Back</button>
           <button class="btn btn-primary" onclick="nextStep()">Continue</button>
@@ -318,6 +332,7 @@
           ></textarea>
         </div>
 
+        <div class="step-error" id="stepError3"></div>
         <div class="nav-row">
           <button class="btn btn-secondary" onclick="prevStep()">Back</button>
           <button class="btn btn-primary" onclick="nextStep()">Continue</button>
